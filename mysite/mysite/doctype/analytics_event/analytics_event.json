@@ -1,0 +1,155 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "hash",
+  "creation": "2026-02-23 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "occurred_at",
+    "session_id",
+    "user_id",
+    "customer",
+    "event_type",
+    "page_url",
+    "referrer_url",
+    "source_channel",
+    "device_type",
+    "product_id",
+    "model_name",
+    "item_group",
+    "qty",
+    "amount",
+    "properties_json",
+    "dedupe_key"
+  ],
+  "fields": [
+    {
+      "fieldname": "occurred_at",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Occurred At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "session_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Session ID"
+    },
+    {
+      "fieldname": "user_id",
+      "fieldtype": "Link",
+      "label": "User",
+      "options": "User"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "label": "Customer",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "event_type",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Event Type",
+      "reqd": 1,
+      "search_index": 1
+    },
+    {
+      "fieldname": "page_url",
+      "fieldtype": "Data",
+      "label": "Page URL"
+    },
+    {
+      "fieldname": "referrer_url",
+      "fieldtype": "Data",
+      "label": "Referrer URL"
+    },
+    {
+      "fieldname": "source_channel",
+      "fieldtype": "Select",
+      "label": "Source Channel",
+      "options": "direct\ngoogle\ninstagram\ntelegram\nother"
+    },
+    {
+      "fieldname": "device_type",
+      "fieldtype": "Select",
+      "label": "Device Type",
+      "options": "mobile\ndesktop\ntablet\nother"
+    },
+    {
+      "fieldname": "product_id",
+      "fieldtype": "Data",
+      "label": "Product ID"
+    },
+    {
+      "fieldname": "model_name",
+      "fieldtype": "Data",
+      "label": "Model Name",
+      "search_index": 1
+    },
+    {
+      "fieldname": "item_group",
+      "fieldtype": "Data",
+      "label": "Item Group"
+    },
+    {
+      "default": "1",
+      "fieldname": "qty",
+      "fieldtype": "Float",
+      "label": "Qty"
+    },
+    {
+      "fieldname": "amount",
+      "fieldtype": "Currency",
+      "label": "Amount"
+    },
+    {
+      "fieldname": "properties_json",
+      "fieldtype": "Long Text",
+      "label": "Properties JSON"
+    },
+    {
+      "fieldname": "dedupe_key",
+      "fieldtype": "Data",
+      "label": "Dedupe Key",
+      "unique": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-02-23 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "Analytics Event",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

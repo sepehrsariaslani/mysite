@@ -1,0 +1,102 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "hash",
+  "creation": "2026-02-23 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "session_id",
+    "step_name",
+    "completed",
+    "occurred_at",
+    "device_type",
+    "item_group",
+    "model_name",
+    "source_channel"
+  ],
+  "fields": [
+    {
+      "fieldname": "session_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Session ID"
+    },
+    {
+      "fieldname": "step_name",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Step Name",
+      "options": "product_view\nadd_to_cart\ncheckout_start\norder_submit",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "completed",
+      "fieldtype": "Check",
+      "label": "Completed"
+    },
+    {
+      "fieldname": "occurred_at",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Occurred At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "device_type",
+      "fieldtype": "Select",
+      "label": "Device Type",
+      "options": "mobile\ndesktop\ntablet\nother"
+    },
+    {
+      "fieldname": "item_group",
+      "fieldtype": "Data",
+      "label": "Item Group"
+    },
+    {
+      "fieldname": "model_name",
+      "fieldtype": "Data",
+      "label": "Model Name"
+    },
+    {
+      "fieldname": "source_channel",
+      "fieldtype": "Select",
+      "label": "Source Channel",
+      "options": "direct\ngoogle\ninstagram\ntelegram\nother"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-23 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "Funnel Step",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

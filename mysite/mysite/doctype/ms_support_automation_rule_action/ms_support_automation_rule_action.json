@@ -1,0 +1,42 @@
+{
+  "actions": [],
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "action_type",
+    "value",
+    "extra_json"
+  ],
+  "fields": [
+    {
+      "fieldname": "action_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Action Type",
+      "options": "\nSet Status\nSet Priority\nSet Team\nAssign Agent\nAdd Activity\nEscalate",
+      "reqd": 1
+    },
+    {
+      "fieldname": "value",
+      "fieldtype": "Data",
+      "label": "Value"
+    },
+    {
+      "fieldname": "extra_json",
+      "fieldtype": "Small Text",
+      "label": "Extra JSON"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Automation Rule Action",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    <title>نسخه ویژه | دن‌روم</title>
+
+    <style>
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/peyda-extralight.ttf') format('truetype'); font-weight: 200; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Peyda-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/peyda-light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Pevda-Reqular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Peyda-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Peyda-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Peyda-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Peyda-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+        @font-face { font-family: 'Peyda'; src: url('/assets/den_theme/css/Fonts/Peyda-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+
+        * { font-family: 'Peyda', Tahoma, sans-serif !important; }
+        body { margin: 0; padding: 0; background: #090707; overflow: hidden; }
+
+        #loading-screen {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 20% 20%, #2f2420 0%, #100c0b 56%, #090707 100%);
+            z-index: 999999;
+            transition: opacity 0.45s ease;
+        }
+        #loading-screen.fade-out { opacity: 0; pointer-events: none; }
+        .loader-ring {
+            width: 64px;
+            height: 64px;
+            border: 2px solid rgba(218, 171, 109, 0.24);
+            border-top-color: #e4b36f;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 20px rgba(228, 179, 111, 0.2);
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+
+    <script type="module" crossorigin src="/assets/mysite/frontend/assets/index.js?v=1.0.1"></script>
+    <link rel="stylesheet" href="/assets/mysite/frontend/assets/index.css?v=1.0.1">
+    <meta name="description" content="نسخه ویژه در دن‌روم؛ اطلاعات کامل این صفحه، معرفی محتوا و دسترسی سریع به بخش‌های مرتبط سایت." />
+    <meta name="robots" content="index,follow" />
+</head>
+<body class="h-full">
+    <div id="loading-screen">
+        <div class="loader-ring"></div>
+    </div>
+
+    <div id="app" class="h-full"></div>
+
+    <script>
+        window._PAGE = 'special-edition';
+        {% for key in boot %}
+        window["{{ key }}"] = {{ boot[key] | tojson }};
+        {% endfor %}
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var ls = document.getElementById('loading-screen');
+                if (ls) {
+                    ls.classList.add('fade-out');
+                    setTimeout(function () { ls.remove(); }, 420);
+                }
+                document.body.style.overflow = 'auto';
+            }, 420);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "autoname": "hash",
+  "creation": "2026-02-23 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "session_id",
+    "url",
+    "entered_at",
+    "left_at",
+    "time_spent_seconds",
+    "scroll_depth",
+    "device_type",
+    "source_channel",
+    "product_id",
+    "model_name"
+  ],
+  "fields": [
+    {
+      "fieldname": "session_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Session ID"
+    },
+    {
+      "fieldname": "url",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "URL",
+      "reqd": 1
+    },
+    {
+      "fieldname": "entered_at",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Entered At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "left_at",
+      "fieldtype": "Datetime",
+      "label": "Left At"
+    },
+    {
+      "fieldname": "time_spent_seconds",
+      "fieldtype": "Float",
+      "label": "Time Spent Seconds"
+    },
+    {
+      "fieldname": "scroll_depth",
+      "fieldtype": "Float",
+      "label": "Scroll Depth"
+    },
+    {
+      "fieldname": "device_type",
+      "fieldtype": "Select",
+      "label": "Device Type",
+      "options": "mobile\ndesktop\ntablet\nother"
+    },
+    {
+      "fieldname": "source_channel",
+      "fieldtype": "Select",
+      "label": "Source Channel",
+      "options": "direct\ngoogle\ninstagram\ntelegram\nother"
+    },
+    {
+      "fieldname": "product_id",
+      "fieldtype": "Data",
+      "label": "Product ID"
+    },
+    {
+      "fieldname": "model_name",
+      "fieldtype": "Data",
+      "label": "Model Name"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-23 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "Page View",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

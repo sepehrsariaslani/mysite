@@ -1,0 +1,105 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:metric_key",
+  "creation": "2026-02-23 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "metric_key",
+    "operator",
+    "threshold_value",
+    "window_days",
+    "is_active",
+    "notify_email",
+    "notify_notification_log",
+    "recipients"
+  ],
+  "fields": [
+    {
+      "fieldname": "metric_key",
+      "fieldtype": "Data",
+      "label": "Metric Key",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "operator",
+      "fieldtype": "Select",
+      "label": "Operator",
+      "options": "<\n<=\n=\n>=\n>",
+      "reqd": 1,
+      "default": "<"
+    },
+    {
+      "fieldname": "threshold_value",
+      "fieldtype": "Float",
+      "label": "Threshold Value",
+      "reqd": 1,
+      "default": "1"
+    },
+    {
+      "fieldname": "window_days",
+      "fieldtype": "Int",
+      "label": "Window Days",
+      "default": "7",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "in_list_view": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_email",
+      "fieldtype": "Check",
+      "label": "Notify Email"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_notification_log",
+      "fieldtype": "Check",
+      "label": "Notify Notification Log"
+    },
+    {
+      "fieldname": "recipients",
+      "fieldtype": "Small Text",
+      "label": "Recipients"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-23 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "Analytics Alert Rule",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

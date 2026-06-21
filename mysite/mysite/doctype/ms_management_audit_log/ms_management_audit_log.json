@@ -1,0 +1,134 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-02-26 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "module_key",
+    "action_key",
+    "target_type",
+    "target_key",
+    "change_request",
+    "actor",
+    "actor_roles",
+    "result",
+    "request_id",
+    "ip_address",
+    "user_agent",
+    "details_json",
+    "occurred_at"
+  ],
+  "fields": [
+    {
+      "fieldname": "module_key",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Module Key",
+      "options": "content\nproduct\nsupport\nanalytics\nsystem",
+      "reqd": 1
+    },
+    {
+      "fieldname": "action_key",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Action Key",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_type",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Target Type",
+      "reqd": 1
+    },
+    {
+      "fieldname": "target_key",
+      "fieldtype": "Data",
+      "label": "Target Key"
+    },
+    {
+      "fieldname": "change_request",
+      "fieldtype": "Link",
+      "label": "Change Request",
+      "options": "MS Management Change Request"
+    },
+    {
+      "fieldname": "actor",
+      "fieldtype": "Link",
+      "label": "Actor",
+      "options": "User"
+    },
+    {
+      "fieldname": "actor_roles",
+      "fieldtype": "Small Text",
+      "label": "Actor Roles"
+    },
+    {
+      "fieldname": "result",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Result",
+      "options": "success\nfailed\ndenied",
+      "reqd": 1,
+      "default": "success"
+    },
+    {
+      "fieldname": "request_id",
+      "fieldtype": "Data",
+      "label": "Request ID"
+    },
+    {
+      "fieldname": "ip_address",
+      "fieldtype": "Data",
+      "label": "IP Address"
+    },
+    {
+      "fieldname": "user_agent",
+      "fieldtype": "Small Text",
+      "label": "User Agent"
+    },
+    {
+      "fieldname": "details_json",
+      "fieldtype": "Long Text",
+      "label": "Details JSON"
+    },
+    {
+      "fieldname": "occurred_at",
+      "fieldtype": "Datetime",
+      "in_list_view": 1,
+      "label": "Occurred At",
+      "reqd": 1,
+      "search_index": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-02-26 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Management Audit Log",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "read": 1,
+      "export": 1,
+      "report": 1,
+      "role": "Mysite Audit Viewer"
+    }
+  ],
+  "sort_field": "occurred_at",
+  "sort_order": "DESC"
+}

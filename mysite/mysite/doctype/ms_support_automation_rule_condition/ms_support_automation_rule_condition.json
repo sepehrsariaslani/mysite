@@ -1,0 +1,56 @@
+{
+  "actions": [],
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "condition_type",
+    "fieldname",
+    "operator",
+    "value",
+    "numeric_value"
+  ],
+  "fields": [
+    {
+      "fieldname": "condition_type",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Condition Type",
+      "options": "\nField Equals\nField Contains\nTicket Age Minutes >=\nStatus Category Equals\nAgreement Status Equals\nTrigger Event Equals",
+      "reqd": 1
+    },
+    {
+      "fieldname": "fieldname",
+      "fieldtype": "Data",
+      "label": "Fieldname"
+    },
+    {
+      "default": "=",
+      "fieldname": "operator",
+      "fieldtype": "Select",
+      "label": "Operator",
+      "options": "=\n!=\ncontains\n>=\n<="
+    },
+    {
+      "fieldname": "value",
+      "fieldtype": "Data",
+      "label": "Value"
+    },
+    {
+      "fieldname": "numeric_value",
+      "fieldtype": "Float",
+      "label": "Numeric Value"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Automation Rule Condition",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

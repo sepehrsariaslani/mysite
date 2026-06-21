@@ -1,0 +1,81 @@
+{
+    "actions": [],
+    "allow_import": 1,
+    "autoname": "format:DLR-{dealer_name}-{city}",
+    "creation": "2026-02-20 18:20:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "dealer_name",
+        "province",
+        "city",
+        "phone",
+        "work_hours",
+        "badge"
+    ],
+    "fields": [
+        {
+            "fieldname": "dealer_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "نام نمایندگی",
+            "reqd": 1
+        },
+        {
+            "fieldname": "province",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "استان",
+            "reqd": 1
+        },
+        {
+            "fieldname": "city",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "شهر",
+            "reqd": 1
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "تلفن"
+        },
+        {
+            "fieldname": "work_hours",
+            "fieldtype": "Data",
+            "label": "ساعت کاری"
+        },
+        {
+            "fieldname": "badge",
+            "fieldtype": "Select",
+            "label": "نشان",
+            "options": "Gold\nSilver"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-20 18:20:00.000000",
+    "modified_by": "Administrator",
+    "module": "Mysite",
+    "name": "MySite Dealer",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

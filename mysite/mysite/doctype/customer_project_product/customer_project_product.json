@@ -1,0 +1,75 @@
+{
+    "actions": [],
+    "autoname": "hash",
+    "creation": "2026-02-22 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "item_code",
+        "cloth_item",
+        "project_image",
+        "qty",
+        "note",
+        "sort_order",
+        "is_active"
+    ],
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "محصول",
+            "options": "Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "cloth_item",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "پارچه",
+            "options": "Item"
+        },
+        {
+            "fieldname": "project_image",
+            "fieldtype": "Attach Image",
+            "label": "عکس محصول در پروژه"
+        },
+        {
+            "default": "1",
+            "fieldname": "qty",
+            "fieldtype": "Int",
+            "in_list_view": 1,
+            "label": "تعداد"
+        },
+        {
+            "fieldname": "note",
+            "fieldtype": "Data",
+            "label": "توضیح"
+        },
+        {
+            "default": "0",
+            "fieldname": "sort_order",
+            "fieldtype": "Int",
+            "label": "ترتیب نمایش"
+        },
+        {
+            "default": "1",
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "فعال"
+        }
+    ],
+    "istable": 1,
+    "links": [],
+    "modified": "2026-02-22 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Mysite",
+    "name": "Customer Project Product",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

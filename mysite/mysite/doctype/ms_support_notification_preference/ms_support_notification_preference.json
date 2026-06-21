@@ -1,0 +1,99 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:user",
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "user",
+    "enable_in_app",
+    "enable_sound",
+    "notify_ticket_created",
+    "notify_ticket_customer_reply",
+    "notify_ticket_agent_reply",
+    "notify_ticket_status_changed",
+    "notify_ticket_assigned",
+    "notify_chat_message"
+  ],
+  "fields": [
+    {
+      "fieldname": "user",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "User",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_in_app",
+      "fieldtype": "Check",
+      "label": "Enable In-App"
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_sound",
+      "fieldtype": "Check",
+      "label": "Enable Sound"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_ticket_created",
+      "fieldtype": "Check",
+      "label": "Ticket Created"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_ticket_customer_reply",
+      "fieldtype": "Check",
+      "label": "Customer Reply"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_ticket_agent_reply",
+      "fieldtype": "Check",
+      "label": "Agent Reply"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_ticket_status_changed",
+      "fieldtype": "Check",
+      "label": "Status Changed"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_ticket_assigned",
+      "fieldtype": "Check",
+      "label": "Ticket Assigned"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_chat_message",
+      "fieldtype": "Check",
+      "label": "Chat Message"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Notification Preference",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "All",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

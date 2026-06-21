@@ -1,0 +1,139 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "naming_series:",
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "ticket",
+    "raven_channel",
+    "status",
+    "customer_user",
+    "agent_user",
+    "opened_on",
+    "last_message",
+    "last_message_by",
+    "last_message_at",
+    "closed_on",
+    "source_page"
+  ],
+  "fields": [
+    {
+      "default": "MS-CHAT-.#####",
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "MS-CHAT-.#####"
+    },
+    {
+      "fieldname": "ticket",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Ticket",
+      "options": "MS Support Ticket",
+      "reqd": 1
+    },
+    {
+      "fieldname": "raven_channel",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Raven Channel",
+      "options": "Raven Channel",
+      "reqd": 1
+    },
+    {
+      "default": "Open",
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "Open\nClosed"
+    },
+    {
+      "fieldname": "customer_user",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Customer User",
+      "options": "User",
+      "reqd": 1
+    },
+    {
+      "fieldname": "agent_user",
+      "fieldtype": "Link",
+      "label": "Agent User",
+      "options": "User"
+    },
+    {
+      "fieldname": "opened_on",
+      "fieldtype": "Datetime",
+      "label": "Opened On",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_message",
+      "fieldtype": "Small Text",
+      "label": "Last Message",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_message_by",
+      "fieldtype": "Link",
+      "label": "Last Message By",
+      "options": "User",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_message_at",
+      "fieldtype": "Datetime",
+      "label": "Last Message At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "closed_on",
+      "fieldtype": "Datetime",
+      "label": "Closed On",
+      "read_only": 1
+    },
+    {
+      "fieldname": "source_page",
+      "fieldtype": "Data",
+      "label": "Source Page"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Chat Link",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

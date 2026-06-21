@@ -1,0 +1,108 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "System",
+  "engine": "InnoDB",
+  "field_order": [
+    "default_ticket_status",
+    "ticket_reopen_status",
+    "default_priority",
+    "default_ticket_type",
+    "default_team",
+    "auto_assign_tickets",
+    "default_sla",
+    "enable_reply_email_via_agent",
+    "enable_live_chat"
+  ],
+  "fields": [
+    {
+      "fieldname": "default_ticket_status",
+      "fieldtype": "Link",
+      "label": "Default Ticket Status",
+      "options": "MS Support Ticket Status"
+    },
+    {
+      "fieldname": "ticket_reopen_status",
+      "fieldtype": "Link",
+      "label": "Ticket Reopen Status",
+      "options": "MS Support Ticket Status"
+    },
+    {
+      "fieldname": "default_priority",
+      "fieldtype": "Link",
+      "label": "Default Priority",
+      "options": "MS Support Ticket Priority"
+    },
+    {
+      "fieldname": "default_ticket_type",
+      "fieldtype": "Link",
+      "label": "Default Ticket Type",
+      "options": "MS Support Ticket Type"
+    },
+    {
+      "fieldname": "default_team",
+      "fieldtype": "Link",
+      "label": "Default Team",
+      "options": "MS Support Team"
+    },
+    {
+      "default": "1",
+      "fieldname": "auto_assign_tickets",
+      "fieldtype": "Check",
+      "label": "Auto Assign Tickets"
+    },
+    {
+      "fieldname": "default_sla",
+      "fieldtype": "Link",
+      "label": "Default SLA",
+      "options": "MS Support SLA"
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_reply_email_via_agent",
+      "fieldtype": "Check",
+      "label": "Enable Reply Email Via Agent"
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_live_chat",
+      "fieldtype": "Check",
+      "label": "Enable Live Chat"
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

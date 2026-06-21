@@ -1,0 +1,65 @@
+{
+    "actions": [],
+    "autoname": "hash",
+    "creation": "2026-02-22 00:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "item_code",
+        "label",
+        "x_percent",
+        "y_percent",
+        "is_active"
+    ],
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "in_list_view": 1,
+            "label": "محصول",
+            "options": "Item",
+            "reqd": 1
+        },
+        {
+            "fieldname": "label",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "عنوان نمایش"
+        },
+        {
+            "default": "50",
+            "fieldname": "x_percent",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "مختصات X (%)",
+            "reqd": 1
+        },
+        {
+            "default": "50",
+            "fieldname": "y_percent",
+            "fieldtype": "Float",
+            "in_list_view": 1,
+            "label": "مختصات Y (%)",
+            "reqd": 1
+        },
+        {
+            "default": "1",
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "فعال"
+        }
+    ],
+    "istable": 1,
+    "links": [],
+    "modified": "2026-02-22 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Mysite",
+    "name": "Shop By Look Hotspot",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}
