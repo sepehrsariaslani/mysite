@@ -1,0 +1,21 @@
+[pre_model_sync]
+# Patches added in this section will be executed before doctypes are migrated
+# Read docs to understand patches: https://frappeframework.com/docs/v14/user/en/database-migrations
+
+[post_model_sync]
+# Patches added in this section will be executed after doctypes are migrated
+mysite.patches.v1_0.backfill_quotation_request_customer
+mysite.patches.v1_0.create_furniture_blog_post
+mysite.patches.v1_0.create_special_edition_item_field
+mysite.patches.v1_0.create_outlet_item_field
+mysite.patches.v1_0.setup_analytics_defaults
+mysite.patches.v1_0.create_analytics_indexes
+mysite.patches.v1_0.backfill_analytics_events
+mysite.patches.v1_0.seed_ms_support_defaults
+mysite.patches.v1_0.seed_ms_support_phase2_defaults
+mysite.patches.v1_0.migrate_hd_tickets_to_ms_support
+mysite.patches.v1_0.migrate_hd_ticket_interactions
+mysite.patches.v1_0.migrate_hd_sla_to_ms_support
+mysite.patches.v1_0.ms_support_migration_post_checks
+mysite.patches.v1_0.setup_management_workflow_rbac
+mysite.patches.v1_0.migrate_website_about_to_single

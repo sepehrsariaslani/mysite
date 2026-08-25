@@ -1,0 +1,130 @@
+{
+    "actions": [],
+    "allow_import": 1,
+    "autoname": "format:SBL-{title}",
+    "creation": "2026-02-22 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "title",
+        "room_type",
+        "room_custom",
+        "cover_image",
+        "caption",
+        "is_published",
+        "show_on_homepage",
+        "sort_order",
+        "section_break_editor",
+        "editor_hint",
+        "editor_html",
+        "section_break_hotspots",
+        "hotspots"
+    ],
+    "fields": [
+        {
+            "fieldname": "title",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "عنوان صحنه",
+            "reqd": 1
+        },
+        {
+            "fieldname": "room_type",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "دسته فضا",
+            "options": "اتاق خواب\nآشپزخانه\nناهارخوری\nنشیمن\nدفتر کار\nفضای باز\nسایر",
+            "reqd": 1
+        },
+        {
+            "depends_on": "eval:doc.room_type=='سایر'",
+            "fieldname": "room_custom",
+            "fieldtype": "Data",
+            "label": "عنوان سفارشی فضا"
+        },
+        {
+            "fieldname": "cover_image",
+            "fieldtype": "Attach Image",
+            "label": "تصویر اصلی",
+            "reqd": 1
+        },
+        {
+            "fieldname": "caption",
+            "fieldtype": "Small Text",
+            "label": "کپشن"
+        },
+        {
+            "default": "1",
+            "fieldname": "is_published",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "منتشر شود"
+        },
+        {
+            "default": "0",
+            "fieldname": "show_on_homepage",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "نمایش در صفحه اصلی"
+        },
+        {
+            "default": "0",
+            "fieldname": "sort_order",
+            "fieldtype": "Int",
+            "in_list_view": 1,
+            "label": "ترتیب نمایش"
+        },
+        {
+            "fieldname": "section_break_editor",
+            "fieldtype": "Section Break",
+            "label": "ادیتور بصری"
+        },
+        {
+            "fieldname": "editor_hint",
+            "fieldtype": "Small Text",
+            "label": "راهنما",
+            "read_only": 1
+        },
+        {
+            "fieldname": "editor_html",
+            "fieldtype": "HTML",
+            "label": "بوم تصویر"
+        },
+        {
+            "fieldname": "section_break_hotspots",
+            "fieldtype": "Section Break",
+            "label": "نقاط محصول"
+        },
+        {
+            "fieldname": "hotspots",
+            "fieldtype": "Table",
+            "label": "Hotspots",
+            "options": "Shop By Look Hotspot"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-22 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Mysite",
+    "name": "Shop By Look Scene",
+    "naming_rule": "Expression",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "sort_order",
+    "sort_order": "ASC",
+    "states": []
+}

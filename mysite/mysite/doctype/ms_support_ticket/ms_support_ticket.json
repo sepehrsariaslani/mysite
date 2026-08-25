@@ -1,0 +1,377 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "allow_rename": 1,
+  "autoname": "naming_series:",
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "subject_section",
+    "naming_series",
+    "subject",
+    "raised_by",
+    "status",
+    "priority",
+    "ticket_type",
+    "team",
+    "assigned_to",
+    "auto_assigned",
+    "status_category",
+    "details_section",
+    "description",
+    "resolution_details",
+    "reference_section",
+    "customer",
+    "contact",
+    "via_customer_portal",
+    "source_channel",
+    "source_page",
+    "related_item_code",
+    "legacy_ticket_id",
+    "sla_section",
+    "sla",
+    "response_by",
+    "resolution_by",
+    "agreement_status",
+    "service_level_agreement_creation",
+    "on_hold_since",
+    "total_hold_time",
+    "response_section",
+    "first_response_time",
+    "first_responded_on",
+    "avg_response_time",
+    "response_count",
+    "total_response_time",
+    "last_customer_reply_on",
+    "last_agent_reply_on",
+    "resolution_section",
+    "opening_date",
+    "opening_time",
+    "resolution_date",
+    "resolution_time",
+    "user_resolution_time",
+    "feedback_section",
+    "feedback",
+    "feedback_rating"
+  ],
+  "fields": [
+    {
+      "fieldname": "subject_section",
+      "fieldtype": "Section Break"
+    },
+    {
+      "default": "MS-TKT-.#####",
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Series",
+      "options": "MS-TKT-.#####"
+    },
+    {
+      "fieldname": "subject",
+      "fieldtype": "Data",
+      "in_global_search": 1,
+      "in_list_view": 1,
+      "label": "Subject",
+      "reqd": 1
+    },
+    {
+      "fieldname": "raised_by",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Raised By",
+      "options": "User"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Status",
+      "options": "MS Support Ticket Status"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Priority",
+      "options": "MS Support Ticket Priority"
+    },
+    {
+      "fieldname": "ticket_type",
+      "fieldtype": "Link",
+      "label": "Ticket Type",
+      "options": "MS Support Ticket Type"
+    },
+    {
+      "fieldname": "team",
+      "fieldtype": "Link",
+      "label": "Team",
+      "options": "MS Support Team"
+    },
+    {
+      "fieldname": "assigned_to",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Assigned To",
+      "options": "User"
+    },
+    {
+      "default": "0",
+      "fieldname": "auto_assigned",
+      "fieldtype": "Check",
+      "label": "Auto Assigned",
+      "read_only": 1
+    },
+    {
+      "fieldname": "status_category",
+      "fieldtype": "Data",
+      "label": "Status Category",
+      "read_only": 1
+    },
+    {
+      "fieldname": "details_section",
+      "fieldtype": "Section Break",
+      "label": "Details"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Text Editor",
+      "label": "Description",
+      "reqd": 1
+    },
+    {
+      "fieldname": "resolution_details",
+      "fieldtype": "Text Editor",
+      "label": "Resolution Details"
+    },
+    {
+      "fieldname": "reference_section",
+      "fieldtype": "Section Break",
+      "label": "Reference"
+    },
+    {
+      "fieldname": "customer",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Customer",
+      "options": "Customer"
+    },
+    {
+      "fieldname": "contact",
+      "fieldtype": "Link",
+      "label": "Contact",
+      "options": "Contact"
+    },
+    {
+      "default": "0",
+      "fieldname": "via_customer_portal",
+      "fieldtype": "Check",
+      "label": "Via Customer Portal"
+    },
+    {
+      "fieldname": "source_channel",
+      "fieldtype": "Data",
+      "label": "Source Channel"
+    },
+    {
+      "fieldname": "source_page",
+      "fieldtype": "Data",
+      "label": "Source Page"
+    },
+    {
+      "fieldname": "related_item_code",
+      "fieldtype": "Link",
+      "label": "Related Item",
+      "options": "Item"
+    },
+    {
+      "fieldname": "legacy_ticket_id",
+      "fieldtype": "Data",
+      "label": "Legacy Ticket ID",
+      "read_only": 1
+    },
+    {
+      "fieldname": "sla_section",
+      "fieldtype": "Section Break",
+      "label": "SLA"
+    },
+    {
+      "fieldname": "sla",
+      "fieldtype": "Link",
+      "label": "SLA",
+      "options": "MS Support SLA"
+    },
+    {
+      "fieldname": "response_by",
+      "fieldtype": "Datetime",
+      "label": "Response By",
+      "read_only": 1
+    },
+    {
+      "fieldname": "resolution_by",
+      "fieldtype": "Datetime",
+      "label": "Resolution By",
+      "read_only": 1
+    },
+    {
+      "fieldname": "agreement_status",
+      "fieldtype": "Select",
+      "label": "Agreement Status",
+      "options": "\nFirst Response Due\nResolution Due\nFailed\nFulfilled\nPaused",
+      "read_only": 1
+    },
+    {
+      "fieldname": "service_level_agreement_creation",
+      "fieldtype": "Datetime",
+      "label": "SLA Creation",
+      "read_only": 1
+    },
+    {
+      "fieldname": "on_hold_since",
+      "fieldtype": "Datetime",
+      "label": "On Hold Since",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_hold_time",
+      "fieldtype": "Duration",
+      "label": "Total Hold Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "response_section",
+      "fieldtype": "Section Break",
+      "label": "Response"
+    },
+    {
+      "fieldname": "first_response_time",
+      "fieldtype": "Duration",
+      "label": "First Response Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "first_responded_on",
+      "fieldtype": "Datetime",
+      "label": "First Responded On",
+      "read_only": 1
+    },
+    {
+      "fieldname": "avg_response_time",
+      "fieldtype": "Duration",
+      "label": "Average Response Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "response_count",
+      "fieldtype": "Int",
+      "label": "Response Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "total_response_time",
+      "fieldtype": "Float",
+      "label": "Total Response Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_customer_reply_on",
+      "fieldtype": "Datetime",
+      "label": "Last Customer Reply",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_agent_reply_on",
+      "fieldtype": "Datetime",
+      "label": "Last Agent Reply",
+      "read_only": 1
+    },
+    {
+      "fieldname": "resolution_section",
+      "fieldtype": "Section Break",
+      "label": "Resolution"
+    },
+    {
+      "default": "Today",
+      "fieldname": "opening_date",
+      "fieldtype": "Date",
+      "label": "Opening Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "opening_time",
+      "fieldtype": "Time",
+      "label": "Opening Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "resolution_date",
+      "fieldtype": "Datetime",
+      "label": "Resolution Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "resolution_time",
+      "fieldtype": "Duration",
+      "label": "Resolution Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "user_resolution_time",
+      "fieldtype": "Duration",
+      "label": "User Resolution Time",
+      "read_only": 1
+    },
+    {
+      "fieldname": "feedback_section",
+      "fieldtype": "Section Break",
+      "label": "Feedback"
+    },
+    {
+      "fieldname": "feedback",
+      "fieldtype": "Link",
+      "label": "Feedback Option",
+      "options": "MS Support Ticket Feedback Option"
+    },
+    {
+      "fieldname": "feedback_rating",
+      "fieldtype": "Int",
+      "label": "Feedback Rating",
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Ticket",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

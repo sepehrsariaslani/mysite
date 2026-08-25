@@ -1,0 +1,154 @@
+{
+    "actions": [],
+    "allow_import": 0,
+    "creation": "2026-02-23 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "title",
+        "subtitle",
+        "hero_intro",
+        "founded_year",
+        "section_break_mission",
+        "mission_title",
+        "mission_body",
+        "column_break_vision",
+        "vision_title",
+        "vision_body",
+        "section_break_values",
+        "core_values",
+        "section_break_history",
+        "history_title",
+        "history_intro",
+        "history_body",
+        "section_break_timeline",
+        "history_timeline"
+    ],
+    "fields": [
+        {
+            "fieldname": "title",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "عنوان صفحه",
+            "reqd": 1
+        },
+        {
+            "fieldname": "subtitle",
+            "fieldtype": "Small Text",
+            "label": "زیرعنوان"
+        },
+        {
+            "fieldname": "hero_intro",
+            "fieldtype": "Small Text",
+            "label": "معرفی کوتاه"
+        },
+        {
+            "fieldname": "founded_year",
+            "fieldtype": "Int",
+            "label": "سال شروع"
+        },
+        {
+            "fieldname": "section_break_mission",
+            "fieldtype": "Section Break",
+            "label": "ماموریت و چشم‌انداز"
+        },
+        {
+            "fieldname": "mission_title",
+            "fieldtype": "Data",
+            "label": "عنوان ماموریت",
+            "reqd": 1
+        },
+        {
+            "fieldname": "mission_body",
+            "fieldtype": "Text Editor",
+            "label": "متن ماموریت",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_vision",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "vision_title",
+            "fieldtype": "Data",
+            "label": "عنوان چشم‌انداز",
+            "reqd": 1
+        },
+        {
+            "fieldname": "vision_body",
+            "fieldtype": "Text Editor",
+            "label": "متن چشم‌انداز",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_values",
+            "fieldtype": "Section Break",
+            "label": "ارزش‌ها"
+        },
+        {
+            "fieldname": "core_values",
+            "fieldtype": "Table",
+            "label": "ارزش‌های کلیدی",
+            "options": "Website About Value"
+        },
+        {
+            "fieldname": "section_break_history",
+            "fieldtype": "Section Break",
+            "label": "تاریخچه"
+        },
+        {
+            "fieldname": "history_title",
+            "fieldtype": "Data",
+            "label": "عنوان تاریخچه",
+            "reqd": 1
+        },
+        {
+            "fieldname": "history_intro",
+            "fieldtype": "Small Text",
+            "label": "خلاصه تاریخچه"
+        },
+        {
+            "fieldname": "history_body",
+            "fieldtype": "Text Editor",
+            "label": "متن تاریخچه",
+            "reqd": 1
+        },
+        {
+            "fieldname": "section_break_timeline",
+            "fieldtype": "Section Break",
+            "label": "تایم‌لاین تاریخچه"
+        },
+        {
+            "fieldname": "history_timeline",
+            "fieldtype": "Table",
+            "label": "رویدادها",
+            "options": "Website About Timeline"
+        }
+    ],
+    "issingle": 1,
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-23 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Mysite",
+    "name": "Website About",
+    "naming_rule": "Random",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

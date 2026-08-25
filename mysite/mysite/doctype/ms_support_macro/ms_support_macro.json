@@ -1,0 +1,89 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:macro_name",
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "macro_name",
+    "enabled",
+    "category",
+    "content",
+    "default_status",
+    "send_email"
+  ],
+  "fields": [
+    {
+      "fieldname": "macro_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Macro Name",
+      "reqd": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Enabled"
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Data",
+      "label": "Category"
+    },
+    {
+      "fieldname": "content",
+      "fieldtype": "Text Editor",
+      "label": "Content",
+      "reqd": 1
+    },
+    {
+      "fieldname": "default_status",
+      "fieldtype": "Link",
+      "label": "Default Status",
+      "options": "MS Support Ticket Status"
+    },
+    {
+      "default": "1",
+      "fieldname": "send_email",
+      "fieldtype": "Check",
+      "label": "Send Email"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Macro",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

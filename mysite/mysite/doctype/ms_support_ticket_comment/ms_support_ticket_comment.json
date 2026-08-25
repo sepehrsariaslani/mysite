@@ -1,0 +1,81 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "hash",
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "reference_ticket",
+    "commented_by",
+    "content",
+    "is_pinned",
+    "legacy_comment_id"
+  ],
+  "fields": [
+    {
+      "fieldname": "reference_ticket",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Reference Ticket",
+      "options": "MS Support Ticket",
+      "reqd": 1
+    },
+    {
+      "fieldname": "commented_by",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Commented By",
+      "options": "User"
+    },
+    {
+      "fieldname": "content",
+      "fieldtype": "Text Editor",
+      "label": "Content",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "is_pinned",
+      "fieldtype": "Check",
+      "label": "Is Pinned"
+    },
+    {
+      "fieldname": "legacy_comment_id",
+      "fieldtype": "Data",
+      "label": "Legacy Comment ID"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Ticket Comment",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "creation",
+  "sort_order": "ASC"
+}

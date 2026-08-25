@@ -1,0 +1,84 @@
+{
+    "actions": [],
+    "allow_import": 1,
+    "autoname": "hash",
+    "creation": "2026-02-22 00:00:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "faq_question",
+        "faq_category",
+        "sort_order",
+        "is_published",
+        "show_on_homepage",
+        "faq_answer"
+    ],
+    "fields": [
+        {
+            "fieldname": "faq_question",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "سوال",
+            "reqd": 1
+        },
+        {
+            "fieldname": "faq_category",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "دسته‌بندی",
+            "options": "عمومی\nمحصولات\nپارچه و رنگ\nثبت سفارش\nزمان ساخت و ارسال\nنصب و خدمات\nگارانتی\nپرداخت",
+            "reqd": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "sort_order",
+            "fieldtype": "Int",
+            "in_list_view": 1,
+            "label": "ترتیب نمایش"
+        },
+        {
+            "default": "1",
+            "fieldname": "is_published",
+            "fieldtype": "Check",
+            "in_list_view": 1,
+            "label": "نمایش در سایت"
+        },
+        {
+            "default": "0",
+            "fieldname": "show_on_homepage",
+            "fieldtype": "Check",
+            "label": "نمایش در صفحه اصلی"
+        },
+        {
+            "fieldname": "faq_answer",
+            "fieldtype": "Text Editor",
+            "label": "پاسخ",
+            "reqd": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-02-22 00:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Mysite",
+    "name": "Website FAQ",
+    "naming_rule": "Random",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "sort_order",
+    "sort_order": "ASC",
+    "states": []
+}

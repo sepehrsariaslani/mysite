@@ -1,0 +1,50 @@
+name: Server Tests
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    services:
+      mariadb:
+        image: mariadb:10.11
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: test_site
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install MariaDB client and Redis
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mariadb-client redis-server
+
+      - name: Prepare Bench + Site
+        run: bash .github/helpers/install.sh
+
+      - name: Run app tests
+        run: |
+          cd "$BENCH_DIR"
+          bench --site test_site run-tests --app mysite

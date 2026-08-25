@@ -1,0 +1,85 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "autoname": "field:label_agent",
+  "creation": "2026-02-25 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "label_agent",
+    "category",
+    "order",
+    "color",
+    "enabled"
+  ],
+  "fields": [
+    {
+      "fieldname": "label_agent",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Label",
+      "reqd": 1
+    },
+    {
+      "default": "Open",
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Category",
+      "options": "Open\nPaused\nResolved\nClosed",
+      "reqd": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "order",
+      "fieldtype": "Int",
+      "label": "Order"
+    },
+    {
+      "default": "Blue",
+      "fieldname": "color",
+      "fieldtype": "Select",
+      "label": "Color",
+      "options": "Black\nGray\nBlue\nGreen\nRed\nPink\nOrange\nAmber\nYellow\nCyan\nTeal\nViolet\nPurple"
+    },
+    {
+      "default": "1",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "in_list_view": 1,
+      "label": "Enabled"
+    }
+  ],
+  "links": [],
+  "modified": "2026-02-25 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Support Ticket Status",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Website Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "order",
+  "sort_order": "ASC"
+}

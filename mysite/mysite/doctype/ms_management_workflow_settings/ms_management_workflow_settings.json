@@ -1,0 +1,84 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2026-02-26 00:00:00.000000",
+  "doctype": "DocType",
+  "document_type": "System",
+  "engine": "InnoDB",
+  "field_order": [
+    "enforce_workflow",
+    "shadow_mode",
+    "shadow_until",
+    "allow_system_manager_bypass",
+    "notify_on_submit_review",
+    "notify_on_approve"
+  ],
+  "fields": [
+    {
+      "default": "0",
+      "fieldname": "enforce_workflow",
+      "fieldtype": "Check",
+      "label": "Enforce Workflow"
+    },
+    {
+      "default": "1",
+      "fieldname": "shadow_mode",
+      "fieldtype": "Check",
+      "label": "Shadow Mode"
+    },
+    {
+      "fieldname": "shadow_until",
+      "fieldtype": "Date",
+      "label": "Shadow Until"
+    },
+    {
+      "default": "1",
+      "fieldname": "allow_system_manager_bypass",
+      "fieldtype": "Check",
+      "label": "Allow System Manager Bypass"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_on_submit_review",
+      "fieldtype": "Check",
+      "label": "Notify On Submit Review"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_on_approve",
+      "fieldtype": "Check",
+      "label": "Notify On Approve"
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2026-02-26 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "Mysite",
+  "name": "MS Management Workflow Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "Mysite Audit Viewer"
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}
